@@ -10,7 +10,8 @@ def inject_current_user():
     if user_id:
         result = UserService.get_user_by_id(user_id)
         if result["success"]:
-            return {"current_user": result["user"]}
+            result["user"]
+            return {"current_user": result["person"]}
         session.pop("user_id", None)
     return {"current_user": None}
 

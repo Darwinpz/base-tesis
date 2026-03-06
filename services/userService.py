@@ -73,7 +73,8 @@ class UserService:
             return {
                 "success": True,
                 "message": "Usuario encontrado",
-                "user": person
+                "person": person,
+                "user": user
             }
         except Exception as e:
             return {
