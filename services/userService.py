@@ -70,11 +70,19 @@ class UserService:
                 }
             person = PersonRepository.find_by_user_id(user_id)
 
+            profile = {
+                "id": user.id,
+                "email": user.email,
+                "role": user.role,
+                "identification": person.identification,
+                "first_name": person.first_name,
+                "last_name": person.last_name
+            }
+
             return {
                 "success": True,
                 "message": "Usuario encontrado",
-                "person": person,
-                "user": user
+                "user": profile
             }
         except Exception as e:
             return {
