@@ -81,3 +81,13 @@ class UserRepository:
         except PyMongoError as e:
             print(f"Error al eliminar el usuario por Id en la BD: {e}")
             raise
+
+    @classmethod
+    def find_by_role(cls, role: str) -> List[UserModel]:
+        #Obtiene los usuarios con un rol específico
+        try:
+            collection = cls._get_collection()
+            return [UserModel.from_dict(u) for u in collection.find({"role": role})]
+        except PyMongoError as e:
+            print(f"Error al buscar usuario por rol en la BD: {e}")
+            raise
