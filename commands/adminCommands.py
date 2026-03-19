@@ -13,7 +13,7 @@ def seed_admin_command():
     #Crea el usuario administrador desde las variables de entorno
     admins = UserRepository.find_by_role("admin")
     if admins:
-        click.echo("Ya existe un administrador registrado.")
+        click.echo("Ya existe un administrador registrado. Operación cancelada.")
         return
  
     email    = os.getenv("ADMIN_EMAIL")
