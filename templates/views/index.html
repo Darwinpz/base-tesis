@@ -5,48 +5,49 @@
 <!-- Hero Section -->
 <section class="bg-light py-5">
     <div class="container text-center">
-        <h1 class="display-5 fw-bold">Bienvenidos a la Carrera de Desarrollo de Software</h1>
+        <h1 class="display-5 fw-bold">Centro de Estética, Belleza y Moda "Shirley Buenaño"</h1>
         <p class="lead mt-3">
-            Formamos profesionales capaces de diseñar, desarrollar y mantener soluciones tecnológicas innovadoras.
+            Agenda tus citas de manera rápida y sencilla y disfruta de nuestros servicios de belleza profesional.
         </p>
-        <a href="#aboutProgram" class="btn btn-primary btn-lg mt-3">
-            Conoce más
+        <a href="{{ url_for('users.login') }}" class="btn btn-primary btn-lg mt-3">
+            Agendar Cita
         </a>
     </div>
 </section>
 
-<!-- About Program -->
+<!-- Sobre el Centro -->
 <section class="py-5" id="aboutProgram">
     <div class="container">
         <div class="row align-items-center">
+            
             <div class="col-md-6">
-                <h2 class="fw-bold">¿Por qué estudiar Desarrollo de Software?</h2>
+                <h2 class="fw-bold">¿Por qué elegirnos?</h2>
                 <p class="mt-3">
-                    La carrera de Desarrollo de Software del Instituto Tecnológico Bolivar Madero Vargas
-                    prepara a los estudiantes para enfrentar los retos del mundo digital, dominando
-                    lenguajes de programación, bases de datos y metodologías modernas de desarrollo.
+                    En el centro de estética Shirley Buenaño ofrecemos servicios de belleza con altos estándares
+                    de calidad, utilizando productos profesionales y técnicas actualizadas.
                 </p>
                 <p>
-                    Nuestro enfoque combina teoría y práctica, promoviendo el pensamiento lógico,
-                    la innovación y el trabajo en equipo.
+                    Nuestro objetivo es brindar una experiencia única a cada cliente, garantizando
+                    bienestar, confianza y satisfacción.
                 </p>
             </div>
+
             <div class="col-md-6">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">Competencias que desarrollarás</h5>
+                        <h5 class="card-title">Nuestros servicios</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Programación web y de escritorio</li>
-                            <li class="list-group-item">Diseño y gestión de bases de datos</li>
-                            <li class="list-group-item">Análisis y solución de problemas</li>
-                            <li class="list-group-item">Trabajo colaborativo y metodologías ágiles</li>
+                            <li class="list-group-item">Corte y peinado</li>
+                            <li class="list-group-item">Manicure y pedicure</li>
+                            <li class="list-group-item">Tratamientos faciales</li>
+                            <li class="list-group-item">Maquillaje profesional</li>
                         </ul>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
-
 
 {% endblock %}

@@ -10,10 +10,10 @@ class UserService:
     #Servicio con lógica de negocio para los usuarios
 
     @staticmethod
-    def create_user(identification: str, first_name: str, last_name: str, email: str, password: str) -> Dict:
+    def create_user(identification: str, first_name: str, last_name: str, phone: str, email: str, password: str) -> Dict:
         # Crea un nuevo usuario con validaciones
 
-        errors = validate_registration_data(identification, first_name, last_name, email, password)
+        errors = validate_registration_data(identification, first_name, last_name, email, password, phone)
 
         if errors:
             return {
@@ -85,7 +85,8 @@ class UserService:
                 "role": user.role,
                 "identification": person.identification,
                 "first_name": person.first_name,
-                "last_name": person.last_name
+                "last_name": person.last_name,
+                "phone": person.phone
             }
 
             return {
